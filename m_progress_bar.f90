@@ -56,6 +56,8 @@ contains
     write(fmt,"(a,i0,a)") "(1a1,(a,i0,a,i0,a,",table_length,"a,i0,a),$)"
     write(*,fmt)  char(13),'Iteration ',iter,'/',max_iter,' ',table,pourcentage,'%]'
 
+    deallocate(table)
+
     if (iter.eq.max_iter) then
        write(*,*)
     end if
